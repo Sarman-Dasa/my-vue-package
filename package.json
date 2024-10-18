@@ -1,15 +1,24 @@
 {
   "name": "my-vue-package",
   "version": "0.1.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/my-vue-package.umd.js",
+  "module": "dist/my-vue-package.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-vue-package.esm.js",
+      "require": "./dist/my-vue-package.umd.js"
+    }
+  },
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "vite build"
   },
-  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "devDependencies": {
     "vite": "^4.0.0",
     "vue": "^3.0.0",
