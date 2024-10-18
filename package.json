@@ -2,10 +2,10 @@
   "name": "my-vue-package",
   "version": "0.1.0",
   "main": "./dist/my-vue-package.umd.js",
-  "module": "./dist/my-vue-package.esm.js",
+  "module": "./dist/my-vue-package.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-vue-package.esm.js",
+      "import": "./dist/my-vue-package.es.js",
       "require": "./dist/my-vue-package.umd.js"
     },
      "./dist/style.css": "./dist/style.css"
@@ -13,6 +13,7 @@
   "files": [
     "dist"
   ],
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite"
