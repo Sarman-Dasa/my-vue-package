@@ -12,14 +12,6 @@ export default defineConfig({
       fileName: (format) => `my-vue-package.${format}.js`,
       formats: ['es', 'umd']
     },
-    rollupOptions: {
-      external: ['vue'],
-      output: {
-        globals: {
-          vue: 'Vue'
-        }
-      }
-    }
   }
 });
 

@@ -1,6 +1,9 @@
 {
   "name": "my-vue-package",
   "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/my-vue-package.umd.js",
   "module": "./dist/my-vue-package.es.js",
   "exports": {
@@ -8,15 +11,13 @@
       "import": "./dist/my-vue-package.es.js",
       "require": "./dist/my-vue-package.umd.js"
     },
-     "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css"
   },
-  "files": [
-    "dist"
-  ],
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "dev": "vite"
+    "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.4.15"
