@@ -2013,12 +2013,7 @@ const qr = { class: "my-component" }, Gr = /* @__PURE__ */ ur({
       Ve("button", { onClick: n }, "Click Me!")
     ]));
   }
-}), Qr = (e, t) => {
-  const n = e.__vccOpts || e;
-  for (const [s, r] of t)
-    n[s] = r;
-  return n;
-}, Xr = /* @__PURE__ */ Qr(Gr, [["__scopeId", "data-v-49cd35de"]]);
+});
 export {
-  Xr as MyComponent
+  Gr as MyComponent
 };

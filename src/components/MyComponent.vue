@@ -14,10 +14,10 @@
   };
   </script>
   
-  <style scoped>
+  <style>
   .my-component {
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #6f83e6;
     padding: 1em;
     border-radius: 8px;
   }

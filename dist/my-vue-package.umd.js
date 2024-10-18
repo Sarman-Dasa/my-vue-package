@@ -18,4 +18,4 @@ Component that was made reactive: `,e)),Pe(e,t,n,s,r,i,o,!0)}function Hr(e){retu
 * vue v3.5.12
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
-**/function Yr(){Jr()}process.env.NODE_ENV!=="production"&&Yr();const qr={class:"my-component"},Gr=((e,t)=>{const n=e.__vccOpts||e;for(const[s,r]of t)n[s]=r;return n})(ur({__name:"MyComponent",setup(e){const t=Wn("Hello from MyComponent!"),n=()=>{alert("Button Clicked!")};return(s,r)=>(Tr(),$r("div",qr,[Pe("h2",null,bt(t.value),1),Pe("button",{onClick:n},"Click Me!")]))}}),[["__scopeId","data-v-49cd35de"]]);X.MyComponent=Gr,Object.defineProperty(X,Symbol.toStringTag,{value:"Module"})});
+**/function Yr(){Jr()}process.env.NODE_ENV!=="production"&&Yr();const qr={class:"my-component"},Gr=ur({__name:"MyComponent",setup(e){const t=Wn("Hello from MyComponent!"),n=()=>{alert("Button Clicked!")};return(s,r)=>(Tr(),$r("div",qr,[Pe("h2",null,bt(t.value),1),Pe("button",{onClick:n},"Click Me!")]))}});X.MyComponent=Gr,Object.defineProperty(X,Symbol.toStringTag,{value:"Module"})});
