@@ -2010,7 +2010,10 @@ const qr = { class: "my-component" }, Gr = /* @__PURE__ */ ur({
     };
     return (s, r) => (Tr(), $r("div", qr, [
       Ve("h2", null, yt(t.value), 1),
-      Ve("button", { onClick: n }, "Click Me!")
+      Ve("button", {
+        class: "my-component-button",
+        onClick: n
+      }, "Click Me!")
     ]));
   }
 });
