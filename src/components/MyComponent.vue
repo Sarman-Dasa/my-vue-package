@@ -16,7 +16,7 @@ const isShow = ref(false);
 const clickHandler = () => {
   isShow.value = !isShow.value;
   emit('componentClick');
-  alert("Button Clicked!");
+  // alert("Button Clicked!");
 };
 </script>
 
