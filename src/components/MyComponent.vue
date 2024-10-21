@@ -2,14 +2,18 @@
   <div class="my-component">
     <h2>{{ message }}</h2>
     <button class="my-component-button" @click="clickHandler">Click Me!</button>
+    <HelloWorld v-if="isShow"/>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import HelloWorld from "./HelloWorld.vue";
 
 const message = ref("Hello from MyComponent!");
+const isShow = ref(false);
 const clickHandler = () => {
+  isShow.value = !isShow.value;
   alert("Button Clicked!");
 };
 </script>
