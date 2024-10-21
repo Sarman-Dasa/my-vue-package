@@ -2078,5 +2078,6 @@ const Qr = (e, t) => {
   }
 });
 export {
+  kr as HelloWorld,
   ts as MyComponent
 };
