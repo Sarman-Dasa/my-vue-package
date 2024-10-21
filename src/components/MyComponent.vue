@@ -2,7 +2,7 @@
   <div class="my-component">
     <h2>{{ message }}</h2>
     <button class="my-component-button" @click="clickHandler">Click Me!</button>
-    <HelloWorld />
+    <HelloWorld v-if="isShow"/>
   </div>
 </template>
 
@@ -16,7 +16,6 @@ const isShow = ref(false);
 const clickHandler = () => {
   isShow.value = !isShow.value;
   emit('componentClick');
-  // alert("Button Clicked!");
 };
 </script>
 
