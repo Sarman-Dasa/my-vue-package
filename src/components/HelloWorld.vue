@@ -1,46 +1,40 @@
 <script setup>
-import { onMounted, onUpdated, ref } from 'vue'
+import {  nextTick, ref } from "vue";
 
 defineProps({
   msg: String,
-})
+});
 
-const count = ref(0)
 const isShowChild = ref(false);
+const count = ref(0);
 
-function increaseValue() {
-  console.log('increaseValue: ');
-  isShowChild.value = !isShowChild.value
-  count.value += 1;
+
+async function increaseValue() {
+  count.value +=1
+  await nextTick();
+  isShowChild.value = !isShowChild.value;
 }
-
-
-onMounted(() => {
-  console.log("onMounted");
-})
-
-onUpdated(() => {
-  console.log("onUpdated");
-})
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="increaseValue">count is {{ count }}</button>
+    <button type="button" @click="increaseValue">
+      count is {{ count }}
+    </button>
   </div>
 
-  <p v-if="isShowChild">
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+  <p v-if="isShowChild" class="read-the-docs">
+    Toggle component
   </p>
 </template>
 
 <style scoped>
 .read-the-docs {
   color: #888;
+  padding: 5px;
+  border: 2px solid #888;
+  border-radius: 10px;
 }
 </style>

@@ -1,6 +1,13 @@
 <script setup>
+import { ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
 import MyComponent from './components/MyComponent.vue';
+
+const isShow = ref(false)
+function MyComponentClickEvent() {
+  console.log("custom component function click event");
+  isShow.value=!isShow.value
+}
 </script>
 
 <template>
@@ -12,7 +19,7 @@ import MyComponent from './components/MyComponent.vue';
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <MyComponent />
+  <MyComponent @componentClick="MyComponentClickEvent" :is-show="isShow"/>
 </template>
 
 <style scoped>

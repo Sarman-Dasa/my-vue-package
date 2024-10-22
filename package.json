@@ -19,9 +19,6 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "peerDependencies": {
-    "vue": "^3.0.0"
-  },
   "dependencies": {
     "vue": "^3.4.15"
   },
