@@ -1,25 +1,15 @@
 <script setup>
-import { ref } from 'vue';
-import HelloWorld from './components/HelloWorld.vue'
-import MyComponent from './components/MyComponent.vue';
+import { ref } from "vue";
 
-const isShow = ref(false)
-function MyComponentClickEvent() {
-  console.log("custom component function click event");
-  isShow.value=!isShow.value
-}
+import { RouterView } from "vue-router";
+import Navbar from "./components/Navbar.vue";
 </script>
 
 <template>
+  <Navbar />
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <RouterView />
   </div>
-  <MyComponent @componentClick="MyComponentClickEvent" :is-show="isShow"/>
 </template>
 
 <style scoped>
